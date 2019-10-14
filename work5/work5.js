@@ -2,7 +2,7 @@
 str ='<table border = "1">'
 for(let i=1;i<=10;++i){
     str += '</tr>'
-    for(var j=1;j<=i;++j){
+    for(var j=1;j<=10;++j){
     str += '<td>&nbsp;</td>'
 }
 str += '</tr>'
