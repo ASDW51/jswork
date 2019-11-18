@@ -3,19 +3,104 @@
         <meta charset="UTF-8">
         <title>钟喜洋的《javascript web前段开发》简单作业</title>
     </head>
+    <style>
+        .css1{
+           background: red; 
+        }
+        .css2{
+            background: green;
+        }
+    #table1 div{
+        display: none;
+    }
+    #div1{
+      
+        display: none;
+    }
+   
+    body{
+        background-image: url('12.jpg');
+        width:100%;height:100%;  
+        background-size:100%100%; 
+    }
+    p{
+        color: blue;
+    }
+    </style>
+    <script>
+    function mulu(){
+        var Odiv1 = document.getElementById('div1');
+        var btn1 = document.getElementById('btn1');
+        var div2= Odiv1.getElementsByTagName('div');
+        var ipt=Odiv1.getElementsByTagName('input')
+
+        for(var i=0;i<div2.length;i++){
+            div2[i].style.display='none'
+           
+        }
+        for(var i=0;i<ipt.length;i++){
+            ipt[i].className=''
+        }
+        if(Odiv1.style.display=='none'){
+            Odiv1.style.display='block';
+            // btn1.style.background='red';
+            btn1.className='css1'
+        }else{
+            Odiv1.style.display='none';
+            btn1.className=''
+        }
+    }
+ function aa(a){
+     var Odiv1 = document.getElementById('div1')
+     var Odiv= Odiv1.getElementsByTagName('div');
+     for(var i=0;i<Odiv.length;i++){
+        Odiv[i].style.display='none'
+        Odiv[i].className=''
+     }
+     var ID= document.getElementById(a);
+     var Odiv1 = document.getElementById('div1');
+
+     var ipt=Odiv1.getElementsByTagName('input')
+     for(var i=0;i<ipt.length;i++){
+        ipt[i].className=''
+     }
+     if(ID.style.display='none'){
+        ID.style.display='block'
+        ipt[a-1].className='css2'
+     }else{
+        ID.style.display='none'
+     }
+ }
+    </script>
     <body>
-        <p>钟喜洋的《javascript web前段开发》简单作业</p>
-     <p><a href="work1/index.html">work1 开发环境安装 </a></p>
-        <p><a href="work2/index.html">work2 简单网页任务</a></p>
-      <p>  <a href="work3/index.html">work3 js基本语法</a><br></p>
-      <p><a href="work4/index.html">work4 js流程控制</a></p> 
-  <p>    <a href="work5/index.html">work5 js循环语句程序</a></p>
-  <P><a href="work6/index.html">work6 阶乘法计算圆周率</a></P>
-  <P> <a href="work7/index.html">work7 冒泡插序和插入排序</a></p>
-    <P> <a href="work7slide/index.html">work7-1 冒泡插序和插入排序动画版</a></p>
-      <p> <a href="work8/index.html">work8 简易计算器</a></p>
-      <p><a href="work9/index.html">work9 三级联动</a></p>
-      <p><a href="work10/index.html">work10 猴子选大王</a></p>
+            <p>钟喜洋的《javascript web前端开发》简单作业</p>
+            <input id="btn1" type="button" value="目录" onclick="mulu()">
+        <div id="div1">
+         <table id="table1">
+            <tr> <td><input type="button" value="work1" onclick="aa('1')"></td> <td><div id="1"><a href="work1/index.html">开发环境安装 </a></div></td> </tr>
+            <tr> <td><input type="button" value="work2" onclick="aa(2)"></td> <td><div id="2"><a href="work2/index.html">简单网页任务</a></div></td> </tr>
+            <tr> <td><input type="button" value="work3" onclick="aa(3)"></td> <td><div id="3"><a href="work3/index.html">js基本语法</a></div></td> </tr>
+            <tr> <td><input type="button" value="work4" onclick="aa(4)"></td> <td><div id="4"><a href="work4/index.html">js流程控制</a>
+            </div></td> </tr>
+            <tr> <td><input type="button" value="work5" onclick="aa(5)"></td> <td><div id="5"><a href="work5/index.html">js循环语句程序</a>
+            </div></td> </tr>
+            <tr> <td><input type="button" value="work6" onclick="aa(6)"></td> <td><div id="6"><a href="work6/index.html">阶乘法计算圆周率</a>
+            </div></td> </tr>
+            <tr> <td><input type="button" value="work7" onclick="aa(7)"></td> <td><div id="7"><a href="work7/index.html">冒泡插序和插入排序</a>
+            </div></td> </tr>
+            <tr> <td><input type="button" value="work7-1" onclick="aa(8)"></td> <td><div id="8"><a href="work7slide/index.html">冒泡插序和插入排序动画版</a>
+            </div></td> </tr>
+            <tr> <td><input type="button" value="work8" onclick="aa(9)"></td> <td><div id="9"><a href="work8/index.html">简易计算器</a>
+            </div></td> </tr>
+            <tr> <td><input type="button" value="work9" onclick="aa(10)"></td> <td><div id="10"><a href="work9/index.html">三级联动</a></div></td> </tr>
+            <tr> <td><input type="button" value="work10" onclick="aa(11)"></td><td><div id="11"><a href="work10/index.html">猴子选大王</a>
+            </div></td> </tr>
+            <tr> <td><input type="button" value="更多" onclick="aa(12)"></td><td><div style="color: blue;" id="12">敬请期待
+            </div></td> </tr>
+
+         </table>   
       持续更新中。。。。。。
+    </div>
+
     </body>            
 </html>
