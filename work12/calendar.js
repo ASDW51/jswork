@@ -11,7 +11,7 @@ function calendar(y){
     html += '<tr>';
     for(var d =1;d<=max;++d){
         if(w&&d == 1){
-            html += '<td cospan ="' + w +'"></td>';
+            html += '<td colspan ="' + w +'"></td>';
 
         }
             html += '<td>' + d + '</td>';
