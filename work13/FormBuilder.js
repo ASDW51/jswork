@@ -36,7 +36,7 @@
 
                 } else {
                     for (var k in option) {
-                        html += '<label><input ' + attr + 'value"' + k + '"' + '>' + option[k] + '</label>';
+                        html += '<label><input ' + attr + 'value="' + k + '"' + '>' + option[k] + '</label>';
 
                     }
                 }
