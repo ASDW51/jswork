@@ -1,6 +1,6 @@
 var hours = new Date().getHours();
 var minutes = new Date().getMinutes();
-var f = 60-minutes;
+var f = 59-minutes;
 
 var second = new Date().getSeconds();
 var m = 60-second;

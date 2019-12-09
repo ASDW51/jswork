@@ -1,0 +1,25 @@
+.cart{
+    width: 700px;
+    padding: 0 10px 10px;
+    border:  1px solid #D5E5F5;
+}
+
+.cart-title{
+    margin-bottom: 10px;
+    font-size:14px;
+    border-bottom: 1px solid rgb(177, 255, 174);
+    line-height: 30px;
+    height: 30px;
+    font-weight: 700;
+    text-indent: 15px;
+    color: #333;
+    font-family: 'Microsoft YaHei';
+}
+
+.cart-table{
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 12px;
+    font-family: Verdana,"Microsoft YaHei";
+}
