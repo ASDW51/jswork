@@ -1,6 +1,6 @@
-//var i=1;
+var i=1;
 
-document.getElementById('upload').onclick=function(){
+document.getElementById('upload').onclick=setInterval(function(){
 
     var form = document.getElementById('form');
     var fd = new FormData(form);    
@@ -24,11 +24,12 @@ document.getElementById('upload').onclick=function(){
             }
             let reg =/^http(s)?:\/\/(.*?)\//
             let downurl = xhr.responseURL.match(reg)[0]+name.slice(2,name.length-1)
-            down.innerHTML = `文件上传成功。<a href=${downurl}>下载文件${downurl}</a>`;//+i+'次';
+            down.innerHTML = `文件上传成功。<a href=${downurl}>下载文件${downurl}</a>`+i+'次';
             i++;
         }
     };
+    // http://139.9.81.203:8090
     xhr.open('POST','http://139.9.81.203:8090/upload');
     xhr.send(fd);
 
-}
+},30)
