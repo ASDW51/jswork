@@ -1,40 +1,143 @@
-
 <html>
     <head>
         <meta charset="UTF-8">
         <title>钟喜洋的《javascript web前段开发》简单作业</title>
     </head>
-    <body>
-        <p>钟喜洋的《javascript web前段开发》简单作业</p>
-     <p><a href="work1/index.html">work1 开发环境安装 </a></p>
-        <p><a href="work2/index.html">work2 简单网页任务</a></p>
-      <p>  <a href="work3/index.html">work3 js基本语法</a><br></p>
-      <p><a href="work4/index.html">work4 js流程控制</a></p> 
-  <p>    <a href="work5/index.html">work5 js循环语句程序</a></p>
-  <P><a href="work6/index.html">work6 阶乘法计算圆周率</a></P>
-  <P> <a href="work7/index.html">work7 冒泡插序和插入排序</a></p>
-    <P> <a href="work7slide/index.html">work7-1 冒泡插序和插入排序动画版</a></p>
-      <p> <a href="work8/index.html">work8 简易计算器</a></p>
-      <p><a href="work9/index.html">work9 三级联动</a></p>
-      <p><a href="work10/index.html">work10 猴子选大王</a></p>
-      <p><a href="work12/index.html">work12 年历</a></p>
-      <p><a href="work13/index.html">work13 表单生成器</a></p>
-      <p><a href="work14/index.html">work14 限时秒杀</a></p>
-      <p><a href="work14/index1.html">work14-1 红绿灯</a></p>
-      <p><a href="work14-1整点秒杀/index.html">work14-2  整点秒杀</a></p>
-      <p><a href="work15/index.html">work15 购物车</a></p>
-      <p><a href="work16/index.html">work16 放大镜</a></p>
-      <p><a href="work16/index1.html">work16-1 小球乱跑</a></p>
-      <p><a href="work17/index.html">work17 表单验证</a></p>
-      <p><a href="work18/index.html">work18 无刷新提交评论</a></p>
-      <p><a href="work18/index1.html">work18-1 无刷新分页查看评论</a></p>
-      <p><a href="work19/index.html">work19 WebSocket聊天室</a></p>
-      <p><a href="work19/index1.html">work19-1 进度条文件上传</a></p>
-      <p><a href="work20/index.html">work20 折叠菜单</a></p>
-      <p><a href="work20/index1.html">work20-1 选项移动</a></p>
-      <p><a href="work21/index.html">work21 无缝轮播图</a></p>
-      <p><a href="work21/index1.html">work21-jQUery Ajax无刷新提交</a></p>
+    <style>
+        .css1{
+           background: red; 
+        }
+        .css2{
+            background: green;
+        }
+    #table1 div{
+        display: none;
+    }
+    #div1{
+      
+        display: none;
+    }
+   
+    body{
+        background-image: url('12.jpg');
+        width:100%;height:100%;  
+        background-size:100%100%; 
+    }
+    p{
+        color: blue;
+    }
+    </style>
+    <script>
+    function mulu(){
+        var Odiv1 = document.getElementById('div1');
+        var btn1 = document.getElementById('btn1');
+        var div2= Odiv1.getElementsByTagName('div');
+        var ipt=Odiv1.getElementsByTagName('input')
 
+        for(var i=0;i<div2.length;i++){
+            div2[i].style.display='none'
+           
+        }
+        for(var i=0;i<ipt.length;i++){
+            ipt[i].className=''
+        }
+        if(Odiv1.style.display=='none'){
+            Odiv1.style.display='block';
+            // btn1.style.background='red';
+            btn1.className='css1'
+        }else{
+            Odiv1.style.display='none';
+            btn1.className=''
+        }
+    }
+ function aa(a){
+     var Odiv1 = document.getElementById('div1')
+     var Odiv= Odiv1.getElementsByTagName('div');
+     for(var i=0;i<Odiv.length;i++){
+        Odiv[i].style.display='none'
+        Odiv[i].className=''
+     }
+     var ID= document.getElementById(a);
+     var Odiv1 = document.getElementById('div1');
+
+     var ipt=Odiv1.getElementsByTagName('input')
+     for(var i=0;i<ipt.length;i++){
+        ipt[i].className=''
+     }
+     if(ID.style.display='none'){
+        ID.style.display='block'
+        ipt[a-1].className='css2'
+     }else{
+        ID.style.display='none'
+     }
+ }
+    </script>
+    <body>
+            <p>钟喜洋的《javascript web前端开发》简单作业</p>
+            <input id="btn1" type="button" value="目录" onclick="mulu()">
+        <div id="div1">
+         <table id="table1">
+            <tr> <td><input type="button" value="work1" onclick="aa('1')"></td> <td><div id="1"><a href="work1/index.html">开发环境安装 </a></div></td> </tr>
+            <tr> <td><input type="button" value="work2" onclick="aa(2)"></td> <td><div id="2"><a href="work2/index.html">简单网页任务</a></div></td> </tr>
+            <tr> <td><input type="button" value="work3" onclick="aa(3)"></td> <td><div id="3"><a href="work3/index.html">js基本语法</a></div></td> </tr>
+            <tr> <td><input type="button" value="work4" onclick="aa(4)"></td> <td><div id="4"><a href="work4/index.html">js流程控制</a>
+            </div></td> </tr>
+            <tr> <td><input type="button" value="work5" onclick="aa(5)"></td> <td><div id="5"><a href="work5/index.html">js循环语句程序</a>
+            </div></td> </tr>
+            <tr> <td><input type="button" value="work6" onclick="aa(6)"></td> <td><div id="6"><a href="work6/index.html">阶乘法计算圆周率</a>
+            </div></td> </tr>
+            <tr> <td><input type="button" value="work7" onclick="aa(7)"></td> <td><div id="7"><a href="work7/index.html">冒泡插序和插入排序</a>
+            </div></td> </tr>
+            <tr> <td><input type="button" value="work7-1" onclick="aa(8)"></td> <td><div id="8"><a href="work7slide/index.html">冒泡插序和插入排序动画版</a>
+            </div></td> </tr>
+            <tr> <td><input type="button" value="work8" onclick="aa(9)"></td> <td><div id="9"><a href="work8/index.html">简易计算器</a>
+            </div></td> </tr>
+            <tr> <td><input type="button" value="work9" onclick="aa(10)"></td> <td><div id="10"><a href="work9/index.html">三级联动</a></div></td> </tr>
+            <tr> <td><input type="button" value="work10" onclick="aa(11)"></td><td><div id="11"><a href="work10/index.html">猴子选大王</a>
+            </div></td> </tr>
+
+            <tr> <td><input type="button" value="work12" onclick="aa(12)"></td><td><div id="12"><a href="work12/index.html">work12 年历</a>
+            </div></td> </tr>
+            <tr> <td><input type="button" value="work13" onclick="aa(13)"></td><td><div id="13"><a href="work13/index.html">work13 表单生成器</a>
+            </div></td> </tr>
+            <tr> <td><input type="button" value="work14" onclick="aa(14)"></td><td><div id="14"><a href="work14/index.html">work14 限时秒杀</a>
+            </div></td> </tr>
+            <tr> <td><input type="button" value="work14-1" onclick="aa(15)"></td><td><div id="15"><a href="work14/index1.html">work14-1 红绿灯</a>
+            </div></td> </tr>
+            <tr> <td><input type="button" value="work14-2" onclick="aa(16)"></td><td><div id="16"><a href="work14-1整点秒杀/index.html">work14-2  整点秒杀</a>
+            </div></td> </tr>
+            <tr> <td><input type="button" value="work15" onclick="aa(17)"></td><td><div id="17"><a href="work15/index.html">work15 购物车</a>
+            </div></td> </tr>
+            <tr> <td><input type="button" value="work16" onclick="aa(18)"></td><td><div id="18"><a href="work16/index.html">work16 放大镜</a>
+            </div></td> </tr>
+            <tr> <td><input type="button" value="work16-1" onclick="aa(19)"></td><td><div id="19"><a href="work16/index1.html">work16-1 小球乱跑</a>
+            </div></td> </tr>
+            <tr> <td><input type="button" value="work17" onclick="aa(20)"></td><td><div id="20"><a href="work17/index.html">work17 表单验证</a>
+            </div></td> </tr>
+            <tr> <td><input type="button" value="work18" onclick="aa(21)"></td><td><div id="21"><a href="work18/index.html">work18 无刷新提交评论</a>
+            </div></td> </tr>
+            <tr> <td><input type="button" value="work18-1" onclick="aa(22)"></td><td><div id="22"><a href="work18/index1.html">work18-1 无刷新分页查看评论</a>
+            </div></td> </tr>
+            <tr> <td><input type="button" value="work19" onclick="aa(23)"></td><td><div id="23"><a href="work19/index.html">work19 WebSocket聊天室</a>
+            </div></td> </tr>
+            <tr> <td><input type="button" value="work19-1" onclick="aa(24)"></td><td><div id="24"><a href="work19/index1.html">work19-1 进度条文件上传</a>
+            </div></td> </tr>
+            <tr> <td><input type="button" value="work20" onclick="aa(25)"></td><td><div id="25"><a href="work20/index.html">work20 折叠菜单</a>
+            </div></td> </tr>
+            <tr> <td><input type="button" value="work20-1" onclick="aa(26)"></td><td><div id="26"><a href="work20/index1.html">work20-1 选项移动</a>
+            </div></td> </tr>
+            <tr> <td><input type="button" value="work21" onclick="aa(27)"></td><td><div id="27"><a href="work21/index.html">work21 无缝轮播图</a>
+            </div></td> </tr>
+            <tr> <td><input type="button" value="work21-1" onclick="aa(28)"></td><td><div id="28"><a href="work21/index1.html">work21-jQUery Ajax无刷新提交</a>
+            </div></td> </tr>
+
+
+            <tr> <td><input type="button" value="更多" onclick="aa(29)"></td><td><div style="color: blue;" id="29">end
+            </div></td> </tr>
+
+         </table>   
       持续更新中。。。。。。
+    </div>
+
     </body>            
 </html>
