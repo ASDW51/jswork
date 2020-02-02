@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    #d{ 
+        border: green 20px solid;
+        background: yellow;
+        text-align: center;
+        
+    }
+    </style>
+<script>
+window.onload = function(){
+    var endTime = new Date('2020-02-15 08:00:00')
+    var d = h = m=s=0;
+    function time(){
+        var nowTime = new Date()
+        var remain = parseInt((endTime-nowTime)/1000)
+        if(remain>0){
+            d=parseInt(remain/(60*60*24))//天数
+            h=parseInt((remain/3600)%24)
+            m=parseInt((remain/60)%60)
+            s=parseInt(remain%60)
+
+            d=d<10?'0'+d:d
+            h=h<10?'0'+h:h
+            m=m<10?'0'+m:m
+            s=s<10?'0'+s:s
+
+        }else{
+            d=h=m=s=0
+        }
+        document.getElementById('d').innerHTML ='<h2><p>寒假倒计时</p></h2>'+'<h3>'+d+'天'+h+'时'+m+'分'+s+'秒'+'</h3>'
+
+    }
+
+    time()
+        setInterval(function(){
+        var nowTime = new Date()
+        var remain = parseInt((endTime-nowTime)/1000)
+        if(remain>0){
+            d=parseInt(remain/(60*60*24))//天数
+            h=parseInt((remain/3600)%24)
+            m=parseInt((remain/60)%60)
+            s=parseInt(remain%60)
+
+            d=d<10?'0'+d:d
+            h=h<10?'0'+h:h
+            m=m<10?'0'+m:m
+            s=s<10?'0'+s:s
+
+        }else{
+            d=h=m=s=0
+        }
+        document.getElementById('d').innerHTML ='<h2><p>寒假倒计时</p></h2>'+'<h3>'+d+'天'+h+'时'+m+'分'+s+'秒'+'</h3>'
+    },1000)
+
+</script>
+
+
+</head>
+
+<body>
+<div id="d"></h2></div>
+</body>
+</html>

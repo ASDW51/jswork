@@ -1,0 +1,12 @@
+1.创建对象 XMLHttpRequest var oAjax = new XMLHttpRequest()
+2.连接服务器 open(方法，文件名,异步传输)// oAjax.open()
+3.发送请求 //oAjax.send()
+4.接收返回//得先加一个事件 (on)readystatechange 事件触发条件为 当oAjax的readystate事件发生改变时，执行onreadyatatechange所绑定的函数
+    4-1 关于readystate的值
+        0: 请求未初始化
+        1: 服务器连接已建立
+        2: 请求已接收
+        3: 请求处理中
+        4: 请求已完成，且响应已就绪
+⚪status => http请求状态码status 当status==200值时 ==>交易成功
+[1,2,3,4,5]

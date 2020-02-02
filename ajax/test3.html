@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<script src="ajax.js"></script>
+<script>
+window.onload = function(){
+    var btn2= document.getElementById('btn2')
+    var name = document.getElementById('username')
+    var pass = document.getElementById('password')
+    btn2.onclick=function(){
+        ajax('test2.txt',function(data){
+           var str = eval(data)
+           var mark;
+            for(var i=0;i<str.length;i++){
+                if(name.value==str[i].username&&pass.value==str[i].pass){
+                   mark=true;
+                   break;
+                }else{
+                   mark=false;
+                }
+            }
+            if(mark){
+                alert('欢迎进入')
+            }else{
+                alert('用户名或密码错误')
+            }
+        },function(){
+
+        })
+    }
+}
+</script>
+<body>
+    <input type="button" id="btn2" value="尝试">
+    username:<input type="text" id="username" name="username">
+    passwoed:<input type="password" id="password" name="password">
+</body>
+</html>

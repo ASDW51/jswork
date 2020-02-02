@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<script>
+window.onload= function(){
+    //获取btn1
+    var btn1 = document.getElementById('btn1')
+    var div1 = document.getElementById('div1')
+    btn1.onclick = function(){
+    var oAjax = new XMLHttpRequest();//创建对象
+    oAjax.open('GET','test2.txt?t='+new Date().getTime(),true)//连接服务器
+    oAjax.send()//发送请求
+   oAjax.onreadystatechange = function(){//绑定事件处理函数，当readystate属性值改变时执行该绑定函数
+    alert(oAjax.readyState)
+        if(oAjax.readyState==4){//等于4时表示请求完成
+            if(oAjax.status==200){//200表示文件已找到
+                var data = oAjax.responseText;
+                var str = eval(data)
+                alert(str.length)
+                div1.innerText=oAjax.responseText
+            }else{
+                alert("错误")
+            }
+    }
+   }
+    }
+}
+</script>
+<body>
+    <input type="button" id="btn1" value="请求">
+    <div id="div1"></div>
+    <a href="test3.html">尝试</a>
+</body>
+</html>
