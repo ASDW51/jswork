@@ -1,4 +1,4 @@
-var lamp = {
+    var lamp = {
     red:{
         obj:document.getElementById('red'),
         timeout:3,

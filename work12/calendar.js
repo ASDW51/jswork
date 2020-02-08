@@ -1,4 +1,7 @@
 function calendar(y){
+    var nian = new Date().getFullYear()
+    var month = new Date().getMonth()+1
+    var day = new Date().getDate();
     var w = new Date(y,0).getDay();
     var html = '<div class="box">';
     for(var m =1; m <= 12; ++m){
@@ -14,7 +17,10 @@ function calendar(y){
             html += '<td colspan ="' + w +'"></td>';
 
         }
-            html += '<td>' + d + '</td>';
+        if(y==nian&&m==month&&d==day){
+            html+='<td class="class">'+d+'</td>'
+        }else{
+            html += '<td>' + d + '</td>';}
             if(w == 6 && d != max){
                 html += '</tr><tr>';
             } else if (d==max ){

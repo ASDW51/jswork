@@ -7,10 +7,12 @@
 </head>
 <body>
     <div class="selyear">
-        <span class="preyear" id="preyear" data-year="" onclick="setCalendar(this.dataset.year)"></span>
+        <span class="preyear" id="preyear" data-year="" onclick="setCalendar(this.dataset.year)">上一年</span>
+        <input type="text" id="ipt1" placeholder="请输入您要查询的年份" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您要查询的年份'">
         <span id="curyear"></span>
-        <span class="nextyear" id="nextyear" data-year="" onclick="setCalendar(this.dataset.year)"></span>
+        <span class="nextyear" id="nextyear" data-year="" onclick="setCalendar(this.dataset.year)">下一年</span>
         <div class="box" id="cal"></div>
+    </div>
 </body>
 <script src="calendar.js"></script>
 <script src="index.js"></script>
